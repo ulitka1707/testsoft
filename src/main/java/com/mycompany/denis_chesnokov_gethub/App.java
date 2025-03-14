@@ -37,38 +37,43 @@ public class App extends javax.swing.JFrame {
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jButton8 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel7 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton6 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jPanel9 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-        jButton7 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -91,14 +96,12 @@ public class App extends javax.swing.JFrame {
 
         jLabel1.setText("<html>22. Задан одномерный массив A[1..15].<br> Определить сумму чѐтных положительных элементов массива.</html>");
 
+        jLabel3.setText("  Сумма положительных элементов массива");
+
         jButton1.setText("Выполнить");
-
-        jLabel3.setText("Массив");
-
-        jButton5.setText("Выполнить");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -111,20 +114,15 @@ public class App extends javax.swing.JFrame {
                 .addGap(0, 969, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(550, 550, 550)
-                .addComponent(jButton5)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(553, 553, 553)
+                        .addComponent(jButton1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -134,56 +132,81 @@ public class App extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
-                .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel3)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(73, 73, 73)
                 .addComponent(jButton1)
-                .addGap(103, 103, 103))
+                .addContainerGap(332, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("22", jPanel4);
 
         jLabel5.setText("<html>\"Заданы массивы a[1...n] и b[1...m]. В обоих массивах все члены, следующие\\n\" +                     \"за максимальным, заменить на -1<br> (использовать процедуру формирования массива\\n\" +                     \"и процедуру замены элементов массива).</html>");
 
-        jLabel6.setText("Массив");
+        jLabel6.setText("массив a");
 
-        jButton8.setText("Выполнить");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setText("Выполнить");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
+
+        jLabel12.setText("массив b ");
+
+        jLabel13.setText("Результирующий массив a");
+
+        jLabel14.setText("Результирующий массив b");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 572, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(582, 582, 582)
-                .addComponent(jButton8)
-                .addContainerGap(622, Short.MAX_VALUE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton2)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel14)
+                                .addComponent(jLabel12)
+                                .addComponent(jLabel13))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                            .addComponent(jLabel6)
+                            .addGap(81, 81, 81)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 572, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 573, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(43, 43, 43)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(112, 112, 112)
-                .addComponent(jButton8)
-                .addContainerGap(293, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addComponent(jButton2)
+                .addContainerGap(219, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("72", jPanel6);
@@ -223,10 +246,10 @@ public class App extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jButton6.setText("Выолнить");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        jButton9.setText("Выполнить");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                jButton9ActionPerformed(evt);
             }
         });
 
@@ -239,9 +262,9 @@ public class App extends javax.swing.JFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86)
-                        .addComponent(jButton6)))
-                .addGap(0, 668, Short.MAX_VALUE))
+                        .addGap(44, 44, 44)
+                        .addComponent(jButton9)))
+                .addGap(0, 704, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -250,22 +273,21 @@ public class App extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 21, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton6)
-                        .addGap(223, 223, 223))))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(118, 118, 118)
+                        .addComponent(jButton9)))
+                .addGap(0, 21, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("22", jPanel7);
 
         jLabel7.setText("\"Сформировать матрицу вида1 1 1 1 1\\n\" + //\"0 0 0 0 0\\n\" + //\"3 3 3 3 3\\n\" + //\"0 0 0 0 0\\n\" + //\"5 5 5 5 5:\");");
 
-        jButton3.setText("Выполнить");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButton10.setText("Выполнить");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButton10ActionPerformed(evt);
             }
         });
 
@@ -275,19 +297,19 @@ public class App extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addComponent(jLabel7)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 751, Short.MAX_VALUE))
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(576, 576, 576)
-                .addComponent(jButton3)
-                .addContainerGap(624, Short.MAX_VALUE))
+                .addGap(490, 490, 490)
+                .addComponent(jButton10)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 249, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(196, 196, 196))
+                .addGap(125, 125, 125)
+                .addComponent(jButton10)
+                .addContainerGap(320, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("42f", jPanel8);
@@ -311,7 +333,12 @@ public class App extends javax.swing.JFrame {
 
         jLabel9.setText("Строка");
 
-        jButton7.setText("Выполнить");
+        jButton11.setText("Выполнить");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -326,8 +353,8 @@ public class App extends javax.swing.JFrame {
                         .addComponent(jTextField3)))
                 .addGap(0, 829, Short.MAX_VALUE))
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(331, 331, 331)
-                .addComponent(jButton7)
+                .addGap(417, 417, 417)
+                .addComponent(jButton11)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
@@ -338,9 +365,9 @@ public class App extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(68, 68, 68)
-                .addComponent(jButton7)
-                .addGap(0, 314, Short.MAX_VALUE))
+                .addGap(60, 60, 60)
+                .addComponent(jButton11)
+                .addGap(0, 322, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("22", jPanel9);
@@ -349,13 +376,12 @@ public class App extends javax.swing.JFrame {
 
         jLabel11.setText("Введенная строка");
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        jButton12.setText("Выполнить");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                jButton12ActionPerformed(evt);
             }
         });
-
-        jButton4.setText("Выполнить");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -368,11 +394,11 @@ public class App extends javax.swing.JFrame {
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField4)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 928, Short.MAX_VALUE))
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(559, 559, 559)
-                .addComponent(jButton4)
-                .addContainerGap(645, Short.MAX_VALUE))
+                .addGap(471, 471, 471)
+                .addComponent(jButton12)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -382,9 +408,9 @@ public class App extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 227, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addGap(155, 155, 155))
+                .addGap(67, 67, 67)
+                .addComponent(jButton12)
+                .addContainerGap(315, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("47", jPanel10);
@@ -393,7 +419,7 @@ public class App extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1326, Short.MAX_VALUE)
+            .addComponent(jTabbedPane4)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -444,47 +470,186 @@ public class App extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTable1ComponentHidden
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-   // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-System.out.println("Задан одномерный массив A[1..15].");
         System.out.println("Нужно определить сумму чётных положительных элементов массива.");
 
         int[] arrayA = new int[15]; 
         Random random = new Random();
 
-       
+       String str=" ";
         for (int i = 0; i < arrayA.length; i++) {
             arrayA[i] = random.nextInt(31) - 10; 
+           
+            System.out.println(arrayA[i]+" ");
+            str +=arrayA[i]+" ";
+           
         }
+         jTextField1.setText(str);
         System.out.println("Начальный массив: " + Arrays.toString(arrayA));
         int sum = sumEvenPositive(arrayA);
         System.out.println("Сумма чётных положительных элементов: " + sum);
-        
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }    
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-  public static int sumEvenPositive(int[] arr) {
+    private int sumEvenPositive(int[] arrayA) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    }//GEN-LAST:event_jButton1ActionPerformed
+  
+      public static int calculateSumOfColumnMinima(int[][] matrix) {
         int sum = 0;
-        for (int element : arr) {
-            if (element > 0 && element % 2 == 0) {
-                sum += element;
+        for (int j = 0; j < 5; j++) { 
+            int min = matrix[0][j];
+            for (int i = 1; i < 5; i++) { 
+                if (matrix[i][j] < min) {
+                    min = matrix[i][j];
+                }
             }
+            sum += min;
         }
         return sum;
+    }
+      
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        
+       int[][] matrix = new int[5][5];
+        Random random = new Random();
+
+        System.out.println("Вывести на экран матрицу 5x5. Определить сумму минимальных элементов\n" +
+"столбцов матрицы.");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                matrix[i][j] = random.nextInt(100) + 1;
+            }
         }
+
+     
+        System.out.println("Исходная матрица:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(Arrays.toString(matrix[i]));
+        }
+
+
+        int sumOfMinima = calculateSumOfColumnMinima(matrix);
+        System.out.println("Сумма минимальных элементов столбцов: " + sumOfMinima);
+    }//GEN-LAST:event_jButton9ActionPerformed
+ 
+    /**
+     *
+     * @param arr
+     * @param random
+     */
+    public static void generateArray(int[] arr, Random random) 
+ {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(100) - 50; 
+        }
+
+   
+  
+ 
+    }
+ 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+        try (Scanner scanner = new Scanner(System.in)) {
+            Random random = new Random();
+            System.out.println("Заданы массивы a[1...n] и b[1...m]. В обоих массивах все члены, следующие\n" +
+                    "за максимальным, заменить на -1 (использовать процедуру формирования массива\n" +
+                    "и процедуру замены элементов массива).");
+            
+            System.out.print("Введите размер массива a (n): ");
+            int n = scanner.nextInt();
+            int[] a = new int[n];
+            
+            System.out.print("Введите размер массива b (m): ");
+            int m = scanner.nextInt();
+            int[] b = new int[m];
+            
+            System.out.println("Формируем массив a...");
+            generateArray(a, random);
+            System.out.println("Исходный массив a: " + Arrays.toString(a));
+            generateArray(a, random);
+            jTextField2.setText(Arrays.toString(a));
+            System.out.println("Формируем массив b...");
+            generateArray(b, random);
+            jTextField5.setText(Arrays.toString(b));
+           
+            
+            System.out.println("Заменяем элементы после максимального в массиве a...");
+            replaceAfterMax(a);
+             jTextField6.setText(Arrays.toString(a));
+            System.out.println("Измененный массив a: " + Arrays.toString(a));
+            
+            System.out.println("Заменяем элементы после максимального в массиве b...");
+            replaceAfterMax(b);
+            System.out.println("Измененный массив b: " + Arrays.toString(b));
+        }     
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    int rows = 10;
+        int cols = 10;
+        int[][] matrix = new int[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            int value;
+            if (i % 2 == 0) { 
+                value = 0;
+            } else {            
+                value = i;      
+            }
+            for (int j = 0; j < cols; j++) {
+                matrix[i][j] = value;
+            }
+        }
+        System.out.println(" моя самая красивая матрица не вручную:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(matrix[i][j]);
+            }
+            System.out.println();
+        }
+        
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+     System.out.println("Изменить введенную строку так, чтобы каждая из цифр увеличилась на\n" +
+"1 (9 заменить 0).");
+     Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите любое количество цифр в строку  от 0 до 9: ");
+        String input = scanner.nextLine();
+        String result = "";
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+            if (Character.isDigit(c)) {
+                int digit = Character.getNumericValue(c);
+                result += (digit + 1) % 10;
+            } else {
+                result += c;
+            }
+        }
+        System.out.println("Измененная строка: " + result);
+    
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+   System.out.println("Вывести введенную строку группами символов по 4 символа в каждой.");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите cтроку или предложение: ");
+        String inputString = scanner.nextLine();
+        for (int i = 0; i < inputString.length(); i += 4) {
+            String group;
+            if (i + 4 < inputString.length()) {
+                group = inputString.substring(i, i + 4);
+            } else {
+                group = inputString.substring(i);
+            }
+            System.out.println(group);
+        
+    } 
+    }//GEN-LAST:event_jButton12ActionPerformed
+ 
     
     
 
@@ -526,15 +691,17 @@ System.out.println("Задан одномерный массив A[1..15].");
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -567,5 +734,27 @@ System.out.println("Задан одномерный массив A[1..15].");
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
-}
+
+    private void replaceAfterMax(int[] arr) {
+     if (arr == null || arr.length == 0) {
+            return;
+        }
+
+        int maxIndex = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > arr[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+
+       
+        for (int i = maxIndex + 1; i < arr.length; i++) {
+            arr[i] = -1;
+        }
+ 
+     }     
+    }
