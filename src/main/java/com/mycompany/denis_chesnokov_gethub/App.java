@@ -8,6 +8,9 @@ package com.mycompany.denis_chesnokov_gethub;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import utils.Massiv;
 
 /**
  *
@@ -15,6 +18,10 @@ import java.util.Scanner;
  */
 public class App extends javax.swing.JFrame {
 
+    private static int sumOfMinColumnElements(int[][] matrix, int[] minColumns) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+ DefaultTableModel dtm = new DefaultTableModel();
     /**
      * Creates new form App
      */
@@ -59,9 +66,13 @@ public class App extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton9 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jButton10 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jPanel9 = new javax.swing.JPanel();
@@ -253,30 +264,50 @@ public class App extends javax.swing.JFrame {
             }
         });
 
+        jLabel15.setText("Сумма минимальных элементов стобцов");
+
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(44, 44, 44)
-                        .addComponent(jButton9)))
-                .addGap(0, 704, Short.MAX_VALUE))
+                        .addComponent(jButton9))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField8))))
+                .addGap(0, 617, Short.MAX_VALUE))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addComponent(jButton9)))
+                        .addGap(146, 146, 146)
+                        .addComponent(jButton9)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 21, Short.MAX_VALUE))
         );
 
@@ -291,15 +322,30 @@ public class App extends javax.swing.JFrame {
             }
         });
 
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "", "", "", "", ""
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addComponent(jLabel7)
-                .addGap(0, 751, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(490, 490, 490)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
                 .addComponent(jButton10)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -307,9 +353,14 @@ public class App extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addComponent(jLabel7)
-                .addGap(125, 125, 125)
-                .addComponent(jButton10)
-                .addContainerGap(320, Short.MAX_VALUE))
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(jButton10))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("42f", jPanel8);
@@ -503,6 +554,7 @@ public class App extends javax.swing.JFrame {
             for (int i = 1; i < 5; i++) { 
                 if (matrix[i][j] < min) {
                     min = matrix[i][j];
+              
                 }
             }
             sum += min;
@@ -512,26 +564,30 @@ public class App extends javax.swing.JFrame {
       
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         
-       int[][] matrix = new int[5][5];
+      int[][]mas_2 = Massiv.generate2(5, 5, -100, 100);
         Random random = new Random();
 
         System.out.println("Вывести на экран матрицу 5x5. Определить сумму минимальных элементов\n" +
 "столбцов матрицы.");
+         dtm = (DefaultTableModel) jTable1.getModel();
+        dtm.setRowCount(5);
+        dtm.setColumnCount(5);
+        //вывод исходного значения
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
-                matrix[i][j] = random.nextInt(100) + 1;
+                dtm.setValueAt(mas_2[i][j], i, j);
             }
-        }
+        
+     }       
+        
 
      
-        System.out.println("Исходная матрица:");
-        for (int i = 0; i < 5; i++) {
-            System.out.println(Arrays.toString(matrix[i]));
-        }
+        
 
 
-        int sumOfMinima = calculateSumOfColumnMinima(matrix);
+        int sumOfMinima = calculateSumOfColumnMinima(mas_2);
         System.out.println("Сумма минимальных элементов столбцов: " + sumOfMinima);
+        jTextField8.setText(sumOfMinima+"");
     }//GEN-LAST:event_jButton9ActionPerformed
  
     /**
@@ -588,27 +644,49 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-    int rows = 10;
-        int cols = 10;
-        int[][] matrix = new int[rows][cols];
+   int[][] mas_2 = new int[5][5];
+        int rows = 5;
+        int cols = 5;
+
         for (int i = 0; i < rows; i++) {
-            int value;
-            if (i % 2 == 0) { 
-                value = 0;
-            } else {            
-                value = i;      
+            int value = 0; 
+
+            if (i == 0) {
+                value = 1;
+            } else if (i == 2) {
+                value = 3;
+            } else if (i == 4) {
+                value = 5;
             }
+
             for (int j = 0; j < cols; j++) {
-                matrix[i][j] = value;
+                mas_2[i][j] = value;
             }
         }
-        System.out.println(" моя самая красивая матрица не вручную:");
+
+      
+        if (dtm == null) {
+            dtm = new DefaultTableModel();
+        }
+
+        if (jTable2 == null) {
+            jTable2 = new JTable(dtm);
+        } else {
+            jTable2.setModel(dtm);
+        }
+
+        dtm.setRowCount(5);
+        dtm.setColumnCount(5);
+
+        
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                System.out.print(matrix[i][j]);
+                dtm.setValueAt(mas_2[i][j], i, j);
             }
-            System.out.println();
         }
+    
+       
+    
         
     }//GEN-LAST:event_jButton10ActionPerformed
 
@@ -649,6 +727,10 @@ public class App extends javax.swing.JFrame {
         
     } 
     }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
  
     
     
@@ -702,6 +784,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -725,11 +808,13 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
@@ -737,6 +822,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 
     private void replaceAfterMax(int[] arr) {
